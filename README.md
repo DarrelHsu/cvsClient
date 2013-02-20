@@ -1,4 +1,6 @@
 cvsClient ( dept\_tools )
 =========
 
-client tool for git and subverison
+源自Google的版本协助管理工具
+支持gitlab的方式
+
