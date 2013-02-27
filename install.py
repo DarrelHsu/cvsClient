@@ -13,10 +13,12 @@ def getBashProfile():
   if OperationSystem() == 'Mac' :
     return "%s/.bash_profile" % home
   else :
-     if os.path.isfile( ".bashrc") :
+     if os.path.isfile( home + "/.bashrc") :
        return "%s/.bashrc" % home
-     elif os.path.isfile("~/.bash_profile") :
+     elif os.path.isfile( home + "/.bash_profile") :
        return "%s/.bash_profile" % home
+     elif os.path.isfile( "/etc/environment") :
+       return "/etc/environment"
 def InsertPath() :
   profilepath = getBashProfile() 
   if not os.path.isfile( profilepath ) :
